@@ -25,20 +25,20 @@ class ProductOptionExtension extends \Magento\Framework\Api\AbstractSimpleObject
     }
 
     /**
-     * @return \Magento\ConfigurableProduct\Api\Data\ConfigurableItemOptionValueInterface[]|null
+     * @return \Magento\Downloadable\Api\Data\DownloadableOptionInterface|null
      */
-    public function getConfigurableItemOptions()
+    public function getDownloadableOption()
     {
-        return $this->_get('configurable_item_options');
+        return $this->_get('downloadable_option');
     }
 
     /**
-     * @param \Magento\ConfigurableProduct\Api\Data\ConfigurableItemOptionValueInterface[] $configurableItemOptions
+     * @param \Magento\Downloadable\Api\Data\DownloadableOptionInterface $downloadableOption
      * @return $this
      */
-    public function setConfigurableItemOptions($configurableItemOptions)
+    public function setDownloadableOption(\Magento\Downloadable\Api\Data\DownloadableOptionInterface $downloadableOption)
     {
-        $this->setData('configurable_item_options', $configurableItemOptions);
+        $this->setData('downloadable_option', $downloadableOption);
         return $this;
     }
 
@@ -61,20 +61,20 @@ class ProductOptionExtension extends \Magento\Framework\Api\AbstractSimpleObject
     }
 
     /**
-     * @return \Magento\Downloadable\Api\Data\DownloadableOptionInterface|null
+     * @return \Magento\ConfigurableProduct\Api\Data\ConfigurableItemOptionValueInterface[]|null
      */
-    public function getDownloadableOption()
+    public function getConfigurableItemOptions()
     {
-        return $this->_get('downloadable_option');
+        return $this->_get('configurable_item_options');
     }
 
     /**
-     * @param \Magento\Downloadable\Api\Data\DownloadableOptionInterface $downloadableOption
+     * @param \Magento\ConfigurableProduct\Api\Data\ConfigurableItemOptionValueInterface[] $configurableItemOptions
      * @return $this
      */
-    public function setDownloadableOption(\Magento\Downloadable\Api\Data\DownloadableOptionInterface $downloadableOption)
+    public function setConfigurableItemOptions($configurableItemOptions)
     {
-        $this->setData('downloadable_option', $downloadableOption);
+        $this->setData('configurable_item_options', $configurableItemOptions);
         return $this;
     }
 }

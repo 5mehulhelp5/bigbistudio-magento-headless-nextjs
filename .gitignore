@@ -1,2 +1,40 @@
-src/
-compose.versions.yaml
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.local
+**/.env.*.local
+
+# Magento generated files
+magento/src/vendor/
+magento/src/generated/
+magento/src/var/
+magento/src/pub/static/
+magento/src/pub/media/
+magento/src/app/etc/env.php
+
+# Magento temporary files
+magento/src/.phpunit.cache/
+magento/src/dev/tests/*/tmp/
+
+# Generated Docker configuration
+magento/compose.versions.yaml
+
+# Next.js
+apps/storefront/.next/
+apps/storefront/node_modules/
+apps/storefront/out/
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log
