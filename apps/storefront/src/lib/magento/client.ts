@@ -40,7 +40,7 @@ export async function magentoFetch<T>({ query, variables }: MagentoFetchOptions)
   try {
     result = await response.json();
   } catch {
-    throw new Error(`Magento returned an invalid JSON response: ${response.status}`);
+    throw new Error(`Magento returned an invalid JSON response (${response.status})`);
   }
 
   if (!response.ok) {
